@@ -22,6 +22,13 @@ class ExerciseModel(private var id: Int, private var name : String,private var i
     fun getisCompleted():Boolean{
         return isCompleted
     }
+    fun setisCompleted(isCompleted: Boolean){
+        this.isCompleted = isCompleted
+
+    }
+    fun setisSelected(isSelected: Boolean){
+        this.isSelected = isSelected
+    }
     fun getisSelected():Boolean{
         return isSelected
     }
