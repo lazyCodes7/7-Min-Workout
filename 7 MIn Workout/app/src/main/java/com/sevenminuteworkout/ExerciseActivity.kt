@@ -1,5 +1,7 @@
 package com.sevenminuteworkout
 
+import android.media.MediaPlayer
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.speech.tts.TextToSpeech
@@ -17,6 +19,7 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     private var restExerciseProgress = 0
     private var exerciseList : ArrayList<ExerciseModel>? = null
     private var currentExercisePosition = -1
+    private var player: MediaPlayer? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
@@ -29,7 +32,7 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         toolbar_exercise_activity.setNavigationOnClickListener {
             onBackPressed()
         }
-        
+
         exerciseList = Constants.defaultExerciseList()
         setupRestView()
 
@@ -38,8 +41,11 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
     override fun onDestroy() {
         if(tts!=null){
-            tts!!.stop()
-            tts!!.shutdown()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.DONUT) {
+                tts!!.stop()
+                tts!!.shutdown()
+
+            }
         }
         if(restTimer!=null){
             restProgress=0
@@ -78,13 +84,18 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
     }
     private fun setupRestView(){
+        player = MediaPlayer.create(applicationContext,R.raw.press_start)
         llExerciseView.visibility=View.GONE
         llRestView.visibility=View.VISIBLE
+        player!!.start()
         if(restTimer!=null){
             restTimer!!.cancel()
             restProgress=0
         }
         tvUpcomingExercise.text = exerciseList!![currentExercisePosition+1].getName()
+        speakOut(get_ready_for.text.toString())
+        speakOut(upcoming_Exercise.text.toString())
+        speakOut(exerciseList!![currentExercisePosition+1].getName())
         restProgressBar()
     }
     private fun setupExerciseRestView(){
@@ -100,9 +111,7 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     }
     private fun restExerciseProgressBar(){
 
-        speakOut(get_ready_for.text.toString())
-        speakOut(upcoming_Exercise.text.toString())
-        speakOut(tvUpcomingExercise.text.toString())
+
         progressExerciseBar.progress = restExerciseProgress
         restExerciseTimer = object : CountDownTimer(30000,1000){
             override fun onTick(millisUntilFinished: Long) {
@@ -128,6 +137,6 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
     }
     private fun speakOut(text: String){
-        tts!!.speak(text,TextToSpeech.QUEUE_FLUSH,null,"")
+        tts!!.speak(text,TextToSpeech.QUEUE_ADD,null,"")
     }
 }

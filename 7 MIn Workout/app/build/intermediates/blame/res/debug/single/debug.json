@@ -16,6 +16,10 @@
         "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/drawable-xhdpi/ic_jumping_jacks.png"
     },
     {
+        "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/raw_press_start.mp3.flat",
+        "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/raw/press_start.mp3"
+    },
+    {
         "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/drawable_circular_progress_gray.xml.flat",
         "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/drawable/circular_progress_gray.xml"
     },
@@ -36,12 +40,12 @@
         "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_plank.png.flat",
-        "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/drawable-xhdpi/ic_plank.png"
-    },
-    {
         "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_wall_sit.png.flat",
         "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/drawable-xhdpi/ic_wall_sit.png"
+    },
+    {
+        "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_plank.png.flat",
+        "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/drawable-xhdpi/ic_plank.png"
     },
     {
         "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_triceps_dip_on_chair.png.flat",
