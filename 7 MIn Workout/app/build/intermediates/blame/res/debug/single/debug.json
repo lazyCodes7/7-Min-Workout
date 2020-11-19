@@ -8,6 +8,10 @@
         "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/drawable_item_circular_grey_background.xml.flat",
+        "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/drawable/item_circular_grey_background.xml"
+    },
+    {
         "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/layout_activity_exercise.xml.flat",
         "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/layout/activity_exercise.xml"
     },
@@ -126,6 +130,10 @@
     {
         "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/drawable-xhdpi_img_main_page.png.flat",
         "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/drawable-xhdpi/img_main_page.png"
+    },
+    {
+        "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/layout_exercise_timer.xml.flat",
+        "source": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/src/main/res/layout/exercise_timer.xml"
     },
     {
         "merged": "/home/dazedtiara6667/7-Min-Workout/7 MIn Workout/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_push_up.png.flat",

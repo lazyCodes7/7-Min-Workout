@@ -99,6 +99,7 @@
         android:id="@+id/llExerciseView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/rvExerciseStatus"
         android:layout_below="@id/toolbar_exercise_activity"
         android:gravity="center"
         android:orientation="vertical"
@@ -141,8 +142,8 @@
                 android:rotation="-90" />
 
             <LinearLayout
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:background="@drawable/item_circular_color_accent_background"
                 android:gravity="center">
@@ -152,11 +153,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFFFFF"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     tools:text="30" />
+
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:id="@+id/rvExerciseStatus"/>
     <!--Step 6 END-->
+
 </RelativeLayout><!--END-->
